@@ -1,0 +1,428 @@
+<messaging:emailTemplate subject="FSTC Course Quotation" recipientType="Lead" relatedToType="Quotation__c" >
+
+<messaging:htmlEmailBody >
+
+<html>
+<body style="font-family: Arial;width=70%;font-size:12px ">
+<b>Dear {!relatedTo.Lead__r.Name},</b>
+
+<p>Congratulations    on taking your first step to reach for the skies, welcome to <b>FSTC!!!</b></p>
+<br/>
+
+<p><b>About our Company</b></p>
+
+<p>Founded in 2012, Flight Simulation Technique Centre (FSTC) is the 1st and largest ATO 
+(Approved Training Organization) certified by both the Directorate General of Civil Aviation 
+(DGCA) and European Union Aviation Safety (EASA) in the country. We are the <b>only
+training organization in India that independently own and operate a Flying School (FTO) and </b>an ATO. This gives our students a unique advantage whereby they can complete their entire training with us,
+from the single-engine Cessna to the Airbus and Boeing, we train the ‘Complete’ pilot.</p>
+<br/>
+<p><b>Our Infrastructure</b></p>
+
+<p><b>Offices</b> - Corporate offices and ATO training centers in Gurugram and Hyderabad.</p>
+
+
+<p>FSTC Flying School - 2 Flying Bases in Bhiwani and Narnaul boast State-of-the-art Infrastructure and brand-new Trainer Aircraft with Glass Cockpits.
+Unrestricted Airspace ensures continuous flying at both our bases and their proximity to DEL/NCR region provides a unique convenience factor. 
+Quality Flying Instructors and an International Training Curriculum further ensure our students get the best training comparable to anywhere in the world.
+We are further expanding and will be opening 4 new flying bases by the year-end.</p>     
+
+
+<p><b>FSTC ATO</b> - We operate 8 Full Flight Level - D Simulators, the highest by an Indian ATO operator belonging to Boeing, Airbus, 
+ATR 72-500/600, and Q400 aircraft.</p>
+<p><b>Our Mission and Values</b></p>
+<p>India has successfully managed, during the past decade, to ensure a world-leading position in Global Aviation and our aim is to
+irrefutably establish India as a Self-Reliant nation in Pilot Training. We pride ourselves in the quality of training we impart, 
+our focus has and will always be to make you the best pilot you can be.</p>
+<p><b> We hope that your association with us will be productive, meaningful, and long-term and we looking forward 
+to helping you achieve your dreams of becoming a pilot.
+Our detailed brochure is attached for your reference.</b></p>
+<p>The Professional Fee for the <b>FSTC - Flying School &nbsp;<u> {!relatedTo.Select_Course_Name__c}</u> &nbsp;course will be INR &nbsp;<u>{!relatedTo.Total_Price__c}</u> &nbsp; <u>Rs. {!relatedTo.Total_Price_In_Words__c} </u>.</b>&nbsp; Please confirm and acknowledge your participation by this 
+week and deposit the initial registration fee for the course into the FSTC Flying School Current account through NEFT/RTGS/Cheque. </p>
+<br/>
+
+<p ><b>Inclusions:</b></p>
+ 
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Registration__c= true}">
+ <li>Registration</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+  <apex:outputText rendered="{!relatedTo.Documentation_Admin_Charges_one_Time__c= true}">
+ <li>Documentation and Admin Charges (one Time)</li>
+ </apex:outputText>
+ </ul>
+ 
+ <ul>
+ <apex:outputText rendered="{!relatedTo.CPL_Ground_Classes__c= true}">
+ <li>CPL Ground Classes</li>
+ </apex:outputText>
+ </ul>
+  <ul>
+ <apex:outputText rendered="{!relatedTo.VR_TRAINING_AND_LICENSING__c= true}">
+ <li>VR TRAINING AND LICENSING</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.PPL_Ground_Classes__c= true}">
+ <li>PPL Ground Classes</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.AFIR_Ground_Classes__c= true}">
+ <li>AFIR Ground Classes</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.SPL_Ground_Classes_Examination_Licens__c= true}">
+ <li>SPL Ground Classes, Examination and License issue fees</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Night_Flying_X_Try_and_RNFC_Charges__c= true}">
+ <li>Night Flying, X-Try, and RNFC Charges</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Examiner_Fee_Checks__c= true}">
+ <li>Examiner Fee – Checks</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Flying_Single_Engine__c= true}">
+ <li>Flying Single Engine - ( {!relatedTo.Single_Engine_Flying_hours__c}) hrs </li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Flying_Multi_Engine__c= true}">
+ <li>Flying Multi-Engine - ( {!relatedTo.Multi_Engine_Flying_hours__c}) hrs</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Patter_Flying__c= true}">
+ <li>Patter Flying - ( {!relatedTo.Patter_Flying_hours__c}) hrs</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Endorsement_Training__c= true}">
+ <li>Endorsement Training - ( {!relatedTo.Endorsement_Training_hours__c}) hrs</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.PIC_Flying__c= true}">
+ <li>PIC Flying - ( {!relatedTo.PIC_Flying_hours__c}) hrs</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Single_Engine_Simulator__c= true}">
+ <li>Single Engine Simulator - ( {!relatedTo.Single_Engine_Simulator_hours__c}) hrs</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Multi_Engine_Simulator__c= true}">
+ <li>Multi Engine Simulator - ( {!relatedTo.Multi_Engine_Simulator_hours__c}) hrs</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Pilot_kit__c= true}">
+ <li>Pilot kit</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.ELPF_Charges__c= true}">
+ <li>ELP Charges</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Airline_Orientation_Program__c= true}">
+ <li>Airline Orientation Program</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Type_Rating_A320_B737_Simulator__c= true}">
+ <li>Type Rating (A320/B737 Simulator)</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Accommodation_at_Flying_Base_12_Months__c= true}">
+ <li>Accommodation at Flying Base (12 Months)</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Accommodation_Type_Rating__c= true}">
+ <li>Accommodation (Type Rating)</li>
+ </apex:outputText>
+ </ul>
+ 
+ 
+ 
+<p><b>Additional Charges:</b></p>
+ <pre>{!relatedTo.StoreExclusions__c}</pre>
+
+<p style="font-style:italic;font-size:10px">Note - 1: Please make the Initial Payment of Rs.{!relatedTo.Registration_Installment_Fee__c} (Non-Refundable) in below bank details of FSTC Flying school. Once payment will be received, we will initiate the documentation process with the current FTO. Once payment is done, please share the transaction snapshot.</p>
+<p style="font-style:italic;font-size:10px">Note - 2: The package given is only valid for 07 days and only the above-mentioned inclusions are part of the package, in case of candidate wishes to avail of any additional services/flying then the candidate has to pay separate charges. (Charges will be as per FSTC norms)</p>
+<p style="font-style:italic;font-size:10px">Note - 3: All Bharat Kosh payments have to be made by candidates individually.</p>
+<p style="font-style:italic;font-size:10px"><b>Note - 4: 6 Months Accommodation fees to be paid in advance</b></p>
+<p style="font-style:italic"><b>Bank Details:<br/></b></p>
+<apex:outputText rendered="{!relatedTo.Select_Bank_Details__c= 'HDFC BANK'}">
+BANK: HDFC BANK<br/>
+ACCOUNT NAME: FSTC FLYING SCHOOL PVT LTD<br/>
+ACCOUNT NUMBER: 50200053718382<br/>
+BRANCH: SCO-7, SECTOR 31-32A, MAIN MARKET, GURGAON-122001<br/>
+IFSC CODE: HDFC0000622<br/>
+</apex:outputText>
+
+<apex:outputText rendered="{!relatedTo.Select_Bank_Details__c= 'YES BANK'}">
+<p>Company : Fstc flying school private limited<br/>
+Corporate Address:  Plot No-46, Sector-35,HSIIDC,Gurgaon-122001<br/>
+Current A/c: 024063700002060 <br/>
+Swift Code :  YESBINBB<br/>
+Branch Address: Yes Bank Ltd Ground Floor Tower B Vatika<br/> 
+First India Place Near Mg Road Metro <br/> 
+Gurgaon Haryana 122002<br/>
+IFSC CODE: YESB0000240<br/></p>
+</apex:outputText>
+<br/>
+<p><b>In the interim, request you to share the soft copies of the below-mentioned documents with us:</b></p>
+<pre>{!relatedTo.Store_Documents__c}</pre>
+<br/>
+<apex:outputText rendered="{!relatedTo.Registration_Installment_Fee__c!= null}">
+<p>Registration Fee Rs {!relatedTo.Registration_Installment_Fee__c} -  {!relatedTo.Registration_Fee_Remark__c}</p>
+</apex:outputText>
+<apex:outputText rendered="{!relatedTo.X1st_Installment__c!= null}">
+<p>1st Instalment Rs {!relatedTo.X1st_Installment__c}  -  {!relatedTo.X1st_Installment_Remark__c}</p>
+</apex:outputText>
+<apex:outputText rendered="{!relatedTo.X2nd_Installment__c!= null}">
+<p>2nd Instalment Rs {!relatedTo.X2nd_Installment__c}  -  {!relatedTo.X2nd_Installment_Remark__c}</p>
+</apex:outputText>
+<apex:outputText rendered="{!relatedTo.X3rd_Installment__c!= null}">
+<p>3rd Instalment Rs {!relatedTo.X3rd_Installment__c}  -  {!relatedTo.X3rd_Installment_Remark__c}</p>
+</apex:outputText>
+<apex:outputText rendered="{!relatedTo.X4th_Installment__c!= null}">
+<p>4th Instalment Rs {!relatedTo.X4th_Installment__c}  -  {!relatedTo.X4th_Installment_Remark__c}</p>
+</apex:outputText>
+<apex:outputText rendered="{!relatedTo.X5th_Installment__c!= null}">
+<p>5th Instalment Rs {!relatedTo.X5th_Installment__c}  -  {!relatedTo.X5th_Installment_Remark__c}</p>
+</apex:outputText>
+<apex:outputText rendered="{!relatedTo.X6th_Installment__c!= null}">
+<p>6th Instalment Rs {!relatedTo.X6th_Installment__c}  -  {!relatedTo.X6th_Installment_Remark__c} </p>
+</apex:outputText>
+<br/>
+<p>Look forward to welcoming you on board.</p>
+<br/>
+<p>Fly High with FSTC!!!</p>
+<p>Regards,</p>
+<p style="color:red;"><b>{!relatedTo.Lead_Assignee_Name__c}</b></p>
+<p style="color:blue;"> Contact: <b>{!relatedTo.Lead_Assignee_Contact_Number__c}</b></p>
+<P><b>Sales And Marketing</b></p>
+
+ <!-- <apex:image id="theImage" value="{!$Resource.Aviationlogo}" width="150" height="40" alt="Description of image here"/> 
+ 
+ <style>
+.fa {
+  padding:10px;
+  font-size: 10px;
+  width: 20px;
+ align:right;
+  text-decoration: none;
+ margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+   background: #cb2027;
+  color: white;
+}
+
+.fa-twitter {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-google {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-linkedin {
+   background: #cb2027;
+  color: white;
+}
+
+.fa-youtube {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-instagram {
+   background: #cb2027;
+  color: white;
+}
+hr.new4 {
+  border: 1px solid red;
+}
+
+}
+</style>
+ <a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>-->
+
+<hr align="center" class="new4"></hr>
+<P><b>FSTC FLYING School Private Limited</b></p>
+<p>Plot No.46,Sector 35,HSIIDC,Gurugram-122001,INDIA</p>
+
+</body>
+</html>
+</messaging:htmlEmailBody>
+<messaging:attachment renderAs="pdf" filename="CoursePrice Estimation.pdf">
+   <html>
+   <body>
+   <img src="{!$Resource.fstcftologoimage}" alt="logo" style="float:left"/><br/>
+   <div style="font-family: Arial, sans-serif; padding: 20px;">
+        <h2>Quote Information</h2>
+        <p><strong>Bill To :</strong> {!relatedTo.Lead__r.Name}</p> 
+        <p><strong> Prepared By  :</strong> {!relatedTo.Lead_Assignee_Name__c}</p> 
+        <p><strong> Email :</strong> {!relatedTo.Lead_Assignee_Email__c}</p> 
+        <p><strong> Contact Number:</strong> {!relatedTo.Lead_Assignee_Contact_Number__c}</p> 
+        <P><strong>Created Date:</strong> {!relatedTo.CreatedDate}</p> 
+        <p><strong>Expiration Date:</strong> {!relatedTo.Expiration_Date__c}</p>  
+         <br/>
+       <h3 >Course Details And Total Price</h3>
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr style="background-color: #f2f2f2;">
+                <th style="padding: 8px; border: 1px solid #ddd;">Course</th>
+                 <th style="padding: 8px; border: 1px solid #ddd;">Total hours</th>
+                 <th style="padding: 8px; border: 1px solid #ddd;">Total Price</th>
+                  <th style="padding: 8px; border: 1px solid #ddd;">Total Price In Words</th>
+            </tr>
+             <tr>
+                   <td style="padding: 8px; border: 1px solid #ddd;">{!relatedTo.Select_Course_Name__c}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">{!relatedTo.Total_Hours__c}hrs</td>
+                     <td style="padding: 8px; border: 1px solid #ddd;">Rs.{!relatedTo.Total_Price__c}</td>
+                     <td style="padding: 8px; border: 1px solid #ddd;">{!relatedTo.Total_Price_In_Words__c}</td>
+                </tr>
+                <br/>
+                <p ><b>Inclusions:</b></p>
+ <!--<pre style="font-style:">{!relatedTo.StoreInclusions__c}</pre>-->
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Registration__c= true}">
+ <li>Registration</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+  <apex:outputText rendered="{!relatedTo.Documentation_Admin_Charges_one_Time__c= true}">
+ <li>Documentation and Admin Charges (one Time)</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.CPL_Ground_Classes__c= true}">
+ <li>CPL Ground Classes</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.VR_TRAINING_AND_LICENSING__c= true}">
+ <li>VR TRAINING AND LICENSING</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.PPL_Ground_Classes__c= true}">
+ <li>PPL Ground Classes</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.AFIR_Ground_Classes__c= true}">
+ <li>AFIR Ground Classes</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.SPL_Ground_Classes_Examination_Licens__c= true}">
+ <li>SPL Ground Classes, Examination and License issue fees</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Night_Flying_X_Try_and_RNFC_Charges__c= true}">
+ <li>Night Flying, X-Try, and RNFC Charges</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Examiner_Fee_Checks__c= true}">
+ <li>Examiner Fee – Checks</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Flying_Single_Engine__c= true}">
+ <li>Flying Single Engine --{!relatedTo.Single_Engine_Flying_hours__c} Hrs</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Flying_Multi_Engine__c= true}">
+ <li>Flying Multi-Engine--{!relatedTo.Multi_Engine_Flying_hours__c} Hrs</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Patter_Flying__c= true}">
+ <li>Patter Flying -- {!relatedTo.Patter_Flying_hours__c} Hrs</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Endorsement_Training__c= true}">
+ <li>Endorsement Training--{!relatedTo.Endorsement_Training_hours__c} Hrs</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.PIC_Flying__c= true}">
+ <li>PIC Flying --{!relatedTo.PIC_Flying_hours__c} Hrs</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Single_Engine_Simulator__c= true}">
+ <li>Single Engine Simulator--{!relatedTo.Single_Engine_Simulator_hours__c} Hrs</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Multi_Engine_Simulator__c= true}">
+ <li>Multi Engine Simulator-- {!relatedTo.Multi_Engine_Simulator_hours__c} Hrs</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Pilot_kit__c= true}">
+ <li>Pilot kit</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.ELPF_Charges__c= true}">
+ <li>ELP Charges</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Airline_Orientation_Program__c= true}">
+ <li>Airline Orientation Program</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Type_Rating_A320_B737_Simulator__c= true}">
+ <li>Type Rating (A320/B737 Simulator)</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Accommodation_at_Flying_Base_12_Months__c= true}">
+ <li>Advance payment before reporting for accommodation at Flying Base (12 Months)</li>
+ </apex:outputText>
+ </ul>
+ <ul>
+ <apex:outputText rendered="{!relatedTo.Accommodation_Type_Rating__c= true}">
+ <li>Accommodation (Type Rating)</li>
+ </apex:outputText>
+ </ul>
+            
+        </table>
+    </div>
+ </body>
+   </html>
+</messaging:attachment>
+</messaging:emailTemplate>
